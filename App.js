@@ -1,20 +1,17 @@
-import * as React from "react";
-import { View, Text } from 'react-native';
+import * as React from 'react';
+import { View } from 'react-native';
 
-// Import a local component here
-import LittleLemonHeader from "./components/LittleLemonHeader";
-import LittleLemonFooter from "./components/LittleLemonFooter";
+import LittleLemonHeader from './components/LittleLemonHeader';
 
 export default function App() {
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: "#495E57"    // Center content horizontally
+        backgroundColor: '#495E57',
       }}
     >
-     <LittleLemonHeader />
-     <LittleLemonFooter />
+      <LittleLemonHeader />
     </View>
   );
 }
