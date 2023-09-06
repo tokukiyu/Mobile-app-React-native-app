@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   headingSection: {
     fontSize: 28,
-    padding: 20,
+    padding: 20, 
     marginVertical: 8,
     color: '#EDEFEE',
     textAlign: 'center',
