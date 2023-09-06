@@ -57,7 +57,7 @@ const menuStyles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  itemText: { chrom
+  itemText: { 
     color: '#F4CE14',
     fontSize: 20,
   },
