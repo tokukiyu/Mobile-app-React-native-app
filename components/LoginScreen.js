@@ -29,7 +29,7 @@ export default function LoginScreen() {
          style={styles.inputBox}
         value={firstName}
         onChangeText={onChangeFirstName}
-        placeholder={"First Name"}
+        placeholder={"First Name"} 
         onFocus={() => {
           Alert.alert("First name is focussed");
         }}
