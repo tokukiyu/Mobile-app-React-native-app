@@ -54,8 +54,9 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 350,
-    height: 250,
-    borderRadius: 10,
+    maxHeight:250,
+    borderRadius: 5,
+    margin:3
   },
   container: {
     flex: 1,
