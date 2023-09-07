@@ -13,7 +13,7 @@ export default function App() {
     <>
       <View style={styles.container}>
         <LittleLemonHeader />
-        <Welcome />
+        <MenuItems />
       </View>
       <View style={styles.footerContainer}>
         <LittleLemonFooter />
