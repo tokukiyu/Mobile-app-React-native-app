@@ -6,7 +6,7 @@ const Welcome = () => {
     <ScrollView style={styles.container}>
       <Image
         style={styles.logo}
-        source={require('../img/littleLemonLogo.png')}
+        source={require('./img/littleLemonHeader.png')}
         resizeMode="center"
         accessible={true}
         accessibilityLabel={'Little Lemon Logo'}
@@ -17,28 +17,28 @@ const Welcome = () => {
       </Text>
       <Image
         style={styles.image}
-        source={require('../img/Picture1.png')}
+        source={require('./img/pc1.png')}
         resizeMode="cover"
         accessible={true}
         accessibilityLabel={'Little Lemon Logo'}
       />
       <Image
         style={styles.image}
-        source={require('../img/Picture2.png')}
+        source={require('./img/p2.png')}
         resizeMode="cover"
         accessible={true}
         accessibilityLabel={'Little Lemon Logo'}
       />
       <Image
         style={styles.image}
-        source={require('../img/Picture3.png')}
+        source={require('./img/pc3.png')}
         resizeMode="cover"
         accessible={true}
         accessibilityLabel={'Little Lemon Logo'}
       />
       <Image
         style={styles.image}
-        source={require('../img/Picture4.png')}
+        source={require('./img/pc4.png')}
         resizeMode="cover"
         accessible={true}
         accessibilityLabel={'Little Lemon Logo'}
