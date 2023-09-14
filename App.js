@@ -23,7 +23,7 @@ export default function App() {
         </View>
       </NavigationContainer>
     </>
-  );  
+  ); 
 }
 
 const styles = StyleSheet.create({
