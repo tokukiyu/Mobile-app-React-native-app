@@ -19,7 +19,7 @@ export default function App() {
           <Stack.Navigator initialRouteName="Login">
             <Stack.Screen name="Welcome" component={Welcome} />
             <Stack.Screen name="Login" component={LoginScreen} />
-          </Stack.Navigator>
+          </Stack.Navigator>  
         </View>
         <View style={styles.footerContainer}>
           <LittleLemonFooter />
