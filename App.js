@@ -5,7 +5,7 @@ import LittleLemonHeader from "./components/LittleLemonHeader";
 import LittleLemonFooter from "./components/LittleLemonFooter";
 import MenuItems from "./components/MenuItems";
 import Welcome from "./Welcome";
-import LoginScreen from "./LoginScreen";
+import WelcomeScreen from "./welcomeScreen"
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -18,7 +18,7 @@ export default function App() {
         <View style={styles.container}>
           <LittleLemonHeader />
           <Stack.Navigator initialRouteName="Login">
-            <Stack.Screen name="Welcome" component={Welcome} />
+            <Stack.Screen name="Welcome" component={WelcomeScreen} />
             <Stack.Screen name="menu" component={MenuItems} />
           </Stack.Navigator>
         </View>
