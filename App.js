@@ -10,7 +10,7 @@ import Welcome from "./Welcome";
 import WelcomeScreen from "./welcomeScreen"
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
+ 
 const Stack = createNativeStackNavigator(); 
 
 export default function App() {
