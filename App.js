@@ -37,36 +37,38 @@ export default function App() {
    <Text style={styles.headerText}>Little Lemon</Text>
    {myJSON &&
     myJSON.map((menuItem) => {
-      return (
-    <SafeAreaView style={menuStyles.container}>
-     <Text style={menuStyles.headerText}>Little Lemon Menu</Text>
-     <FlatList
-      data={menu}
-      keyExtractor={({ id }) => id}
-      renderItem={renderItem}
-     />
-    </SafeAreaView>
-   );
-  }; 
-  
-  const menuStyles = StyleSheet.create({
-   container: {
-    flex: 1,
-   },
-   innerContainer: {
-    paddingHorizontal: 40,
-    paddingVertical: 20,
-    backgroundColor: '#495E57',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-   },
-   itemText: {
-    color: '#F4CE14',
-    fontSize: 22,
-   },
-   headerText: {
-    color: '#F4CE14',
-    fontSize: 30,
-    textAlign: 'center',
-   },
-  });
+     return (
+      <View style={styles.innerContainer}>
+       <Text style={styles.itemText}>{'Menu Item: ' + menuItem.name}</Text>
+       <Text style={styles.itemText}>{'Price: ' + menuItem.price}</Text>
+       <Text style={styles.itemText}>{'Type: ' + menuItem.type}</Text>
+      </View>
+     );
+    })}
+  </SafeAreaView>
+ );
+}
+ 
+
+const styles = StyleSheet.create({
+ container: {
+  flex: 1,
+  backgroundColor: '#F4CE14',
+ },
+ innerContainer: {
+  paddingHorizontal: 40,
+  paddingVertical: 20,
+  backgroundColor: '#F4CE14',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+ },
+ itemText: {
+  color: '#495E57',
+  fontSize: 22,
+ },
+ headerText: {
+  color: '#495E57',
+  fontSize: 30,
+  textAlign: 'center',
+ },
+});
