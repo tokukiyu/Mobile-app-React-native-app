@@ -9,12 +9,12 @@ export default function App() {
     {
         "name": "Veggie Kabob",
         "price": "$12",
-        "type": "Main Dish"
+        "type": "Main Dish" 
     },
     {
         "name": "Greek Salad",
         "price": "$7",
-        "type": "Side"
+        "type": "Side  "
     },
     {
         "name": "Black Tea",
