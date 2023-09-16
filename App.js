@@ -11,7 +11,7 @@ export default function App() {
         "price": "$12",
         "type": "Main Dish" 
     },
-    {
+    { 
         "name": "Greek Salad",
         "price": "$7",
         "type": "Side  "
