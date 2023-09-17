@@ -7,12 +7,14 @@ import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
+  TextInput,
 } from "react-native";
 
 export default App = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("Appetizers"); // Default to "Appetizers"
+  const [selectedCategory, setSelectedCategory] = useState("Appetizers");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const getMenu = async () => {
     try {
@@ -32,9 +34,11 @@ export default App = () => {
     getMenu();
   }, []);
 
-  // Filter data based on selected category
+  // Filter data based on selected category and search query
   const filteredData = data.filter(
-    (item) => item.category.title === selectedCategory
+    (item) =>
+      item.category.title === selectedCategory &&
+      item.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const Item = ({ name, price }) => (
@@ -52,36 +56,33 @@ export default App = () => {
     <SafeAreaView style={menuStyles.container}>
       <Text style={menuStyles.headerText}>Little Lemon</Text>
 
+      {/* Search bar */}
+      <TextInput
+        style={menuStyles.searchInput}
+        placeholder="Search for menu items"
+        value={searchQuery}
+        onChangeText={(text) => setSearchQuery(text)}
+      />
+
       {/* Category selection buttons */}
       <View style={menuStyles.categoryButtons}>
         <TouchableOpacity
-          style={[
-            menuStyles.categoryButton,
-            selectedCategory === "Appetizers" &&
-              menuStyles.selectedCategoryButton,
-          ]}
+          style={[menuStyles.categoryButton, selectedCategory === "Appetizers" && menuStyles.selectedCategoryButton]}
           onPress={() => setSelectedCategory("Appetizers")}
         >
-          <Text>Appetizers</Text>
+          <Text style={menuStyles.categoryButtonText}>Appetizers</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[
-            menuStyles.categoryButton,
-            selectedCategory === "Salads" && menuStyles.selectedCategoryButton,
-          ]}
+          style={[menuStyles.categoryButton, selectedCategory === "Salads" && menuStyles.selectedCategoryButton]}
           onPress={() => setSelectedCategory("Salads")}
         >
-          <Text>Salads</Text>
+          <Text style={menuStyles.categoryButtonText}>Salads</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[
-            menuStyles.categoryButton,
-            selectedCategory === "Beverages" &&
-              menuStyles.selectedCategoryButton,
-          ]}
+          style={[menuStyles.categoryButton, selectedCategory === "Beverages" && menuStyles.selectedCategoryButton]}
           onPress={() => setSelectedCategory("Beverages")}
         >
-          <Text>Beverages</Text>
+          <Text style={menuStyles.categoryButtonText}>Beverages</Text>
         </TouchableOpacity>
       </View>
 
@@ -89,8 +90,8 @@ export default App = () => {
         <ActivityIndicator />
       ) : (
         <FlatList
-          data={filteredData} // Display filtered data
-          keyExtractor={({ id }, index) => id}
+          data={filteredData}
+          keyExtractor={({ id }, index) => id.toString()} // Use toString() to ensure key is a string
           renderItem={renderItem}
         />
       )}
@@ -118,6 +119,13 @@ const menuStyles = StyleSheet.create({
     fontSize: 30,
     textAlign: "center",
   },
+  searchInput: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginHorizontal: 10,
+    backgroundColor: "#EDEDED",
+    borderRadius: 5,
+  },
   categoryButtons: {
     flexDirection: "row",
     justifyContent: "center",
@@ -132,7 +140,6 @@ const menuStyles = StyleSheet.create({
   },
   selectedCategoryButton: {
     backgroundColor: "#F4CE14",
-    color: "#FFFFFF",
   },
   categoryButtonText: {
     color: "#F4CE14",
