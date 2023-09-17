@@ -77,7 +77,7 @@ export default App = () => {
           <Text
             style={[
               menuStyles.categoryButtonText,
-              selectedCategory === "Beverages" &&
+              selectedCategory === "Appetizers" &&
                 menuStyles.selectedCategoryButtonText,
             ]}
           >
@@ -94,7 +94,7 @@ export default App = () => {
           <Text
             style={[
               menuStyles.categoryButtonText,
-              selectedCategory === "Beverages" &&
+              selectedCategory === "Salads" &&
                 menuStyles.selectedCategoryButtonText,
             ]}
           >
