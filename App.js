@@ -74,7 +74,15 @@ export default App = () => {
           ]}
           onPress={() => setSelectedCategory("Appetizers")}
         >
-          <Text style={menuStyles.categoryButtonText}>Appetizers</Text>
+          <Text
+            style={[
+              menuStyles.categoryButtonText,
+              selectedCategory === "Beverages" &&
+                menuStyles.selectedCategoryButtonText,
+            ]}
+          >
+            Appetizers
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[
@@ -83,7 +91,15 @@ export default App = () => {
           ]}
           onPress={() => setSelectedCategory("Salads")}
         >
-          <Text style={menuStyles.categoryButtonText}>Salads</Text>
+          <Text
+            style={[
+              menuStyles.categoryButtonText,
+              selectedCategory === "Beverages" &&
+                menuStyles.selectedCategoryButtonText,
+            ]}
+          >
+            Salads
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[
@@ -160,7 +176,7 @@ const menuStyles = StyleSheet.create({
   selectedCategoryButton: {
     backgroundColor: "#F4CE14",
   },
-  selectedCategoryButtonText:{
+  selectedCategoryButtonText: {
     color: "#FFF",
   },
   categoryButtonText: {
