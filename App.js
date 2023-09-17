@@ -7,7 +7,7 @@ export default function App() {
  const convertStringToJson = () => {
   const myStr = `[
     {
-        "name": "Veggie Kabob",  
+        "name": "Veggie Kabob", 
         "price": "$12",
         "type": "Main Dish" 
     },
