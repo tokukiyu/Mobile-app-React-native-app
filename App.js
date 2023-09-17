@@ -24,7 +24,7 @@ export default App = () => {
       const json = await response.json();
       setData(json.menu);
     } catch (error) {
-      console.error(error);
+      console.error(error); 
     } finally {
       setLoading(false);
     }
