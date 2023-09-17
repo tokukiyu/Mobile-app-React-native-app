@@ -67,22 +67,41 @@ export default App = () => {
       {/* Category selection buttons */}
       <View style={menuStyles.categoryButtons}>
         <TouchableOpacity
-          style={[menuStyles.categoryButton, selectedCategory === "Appetizers" && menuStyles.selectedCategoryButton]}
+          style={[
+            menuStyles.categoryButton,
+            selectedCategory === "Appetizers" &&
+              menuStyles.selectedCategoryButton,
+          ]}
           onPress={() => setSelectedCategory("Appetizers")}
         >
           <Text style={menuStyles.categoryButtonText}>Appetizers</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[menuStyles.categoryButton, selectedCategory === "Salads" && menuStyles.selectedCategoryButton]}
+          style={[
+            menuStyles.categoryButton,
+            selectedCategory === "Salads" && menuStyles.selectedCategoryButton,
+          ]}
           onPress={() => setSelectedCategory("Salads")}
         >
           <Text style={menuStyles.categoryButtonText}>Salads</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[menuStyles.categoryButton, selectedCategory === "Beverages" && menuStyles.selectedCategoryButton]}
+          style={[
+            menuStyles.categoryButton,
+            selectedCategory === "Beverages" &&
+              menuStyles.selectedCategoryButton,
+          ]}
           onPress={() => setSelectedCategory("Beverages")}
         >
-          <Text style={menuStyles.categoryButtonText}>Beverages</Text>
+          <Text
+            style={[
+              menuStyles.categoryButtonText,
+              selectedCategory === "Beverages" &&
+                menuStyles.selectedCategoryButtonText,
+            ]}
+          >
+            Beverages
+          </Text>
         </TouchableOpacity>
       </View>
 
@@ -140,6 +159,9 @@ const menuStyles = StyleSheet.create({
   },
   selectedCategoryButton: {
     backgroundColor: "#F4CE14",
+  },
+  selectedCategoryButtonText:{
+    color: "#FFF",
   },
   categoryButtonText: {
     color: "#F4CE14",
