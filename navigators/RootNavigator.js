@@ -10,7 +10,7 @@ const RootNavigator = () => {
     <Stack.Navigator>
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Subscribe" component={SubscribeScreen} />
-    </Stack.Navigator>
+    </Stack.Navigator> 
   );
 };
 
