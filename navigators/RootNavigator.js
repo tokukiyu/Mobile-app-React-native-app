@@ -6,7 +6,7 @@ import SubscribeScreen from "../screens/SubscribeScreen";
 const Stack = createNativeStackNavigator();
  
 const RootNavigator = () => {
-  return ( 
+  return (  
     <Stack.Navigator>
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Subscribe" component={SubscribeScreen} />
