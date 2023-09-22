@@ -4,7 +4,7 @@ import WelcomeScreen from "../screens/WelcomeScreen";
 import SubscribeScreen from "../screens/SubscribeScreen";
 
 const Stack = createNativeStackNavigator();
- 
+
 const RootNavigator = () => {
   return (
     <Stack.Navigator>
